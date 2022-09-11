@@ -7,8 +7,12 @@ import {
   Route,
 } from 'react-router-dom';
 import Header from '../components/Header';
+import { get } from '../api';
 
 function App() {
+  get('characters', { nameStartsWith: 'spider' })
+    .then(console.log);
+
   return (
 	<>
 		<Router>
